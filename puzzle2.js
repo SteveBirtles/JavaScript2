@@ -38,8 +38,8 @@ function redraw() {
         for (let j = 0; j < puzzleSize; j++) {
             if (!(i == puzzleSize-1 && j == puzzleSize-1)) {
                 context.drawImage(image,
-                    i*pieceWidth, j*pieceWidth, pieceWidth, pieceWidth,
-                    left + i*pieceWidth, top + j*pieceWidth, pieceWidth - spacing, pieceWidth - spacing);
+                    i*pieceWidth, j*pieceHeight, pieceWidth, pieceHeight,
+                    left + i*pieceWidth, top + j*pieceHeight, pieceWidth - spacing, pieceHeight - spacing);
             }
         }
     }
