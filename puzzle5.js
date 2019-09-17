@@ -52,12 +52,6 @@ function pageLoad() {
         pieces.push(row);
     }
 
-    const keys = ["ArrowDown", "ArrowUp", "ArrowLeft", "ArrowRight"]
-    for (let shuffles = 0; shuffles < 100; shuffles ++) {
-        let randomChoice = Math.floor(Math.random() * 4);
-        processKey({key: keys[randomChoice]});
-    }
-
     window.addEventListener("resize", fixSize);
     fixSize();
 
@@ -65,6 +59,17 @@ function pageLoad() {
 
     image.src = "puzzle.jpg";
     image.onload = () => window.requestAnimationFrame(redraw);
+
+    const dirKeys = ["ArrowDown", "ArrowUp", "ArrowLeft", "ArrowRight"]
+
+	  const shuffles = 10*Math.pow(puzzleSize, 2);
+    for (let s = 0; s < shuffles; s++) {
+        let randomChoice = Math.floor(Math.random() * 4);
+		    let key = dirKeys[randomChoice];
+        processKey({key});
+    }
+
+
 
 }
 
