@@ -63,6 +63,7 @@ function pageLoad() {
     const dirKeys = ["ArrowDown", "ArrowUp", "ArrowLeft", "ArrowRight"]
 
 	  const shuffles = 10*Math.pow(puzzleSize, 2);
+
     for (let s = 0; s < shuffles; s++) {
         let randomChoice = Math.floor(Math.random() * 4);
 		    let key = dirKeys[randomChoice];
