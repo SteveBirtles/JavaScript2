@@ -79,11 +79,11 @@ function redraw() {
     const sourcePieceWidth = image.width/puzzleSize;
     const sourcePieceHeight = image.height/puzzleSize;
 
-    const scale = image.height > h ? scale = h/image.height : 1;
+    const scale = image.height > h ? h/image.height : 1;
 
     const destinationPieceWidth = sourcePieceWidth * scale;
     const destinationPieceHeight = sourcePieceHeight * scale;
-    
+
     const left = w/2 - scale*image.width/2 + spacing/2;
     const top = h/2 - scale*image.height/2 + spacing/2;
 
